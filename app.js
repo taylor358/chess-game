@@ -3,7 +3,7 @@ const names={k:'King',q:'Queen',r:'Rook',b:'Bishop',n:'Knight',p:'Pawn'};
 const levels={beginner:{label:'Beginner',depth:1,random:.20,time:.15},easy:{label:'Casual',depth:2,random:.08,time:.3},medium:{label:'Balanced',depth:3,random:.03,time:.65},sharp:{label:'Sharp',depth:5,random:0,time:3},expert:{label:'Expert',depth:6,random:0,time:6}};
 let state, selected=null, legal=[], difficulty='easy', thinking=false;
 const boardEl=document.querySelector('#board'), moveList=document.querySelector('#moveList'), moveCount=document.querySelector('#moveCount'), turnLabel=document.querySelector('#turnLabel'), thinkingEl=document.querySelector('#thinking'), botLevelLabel=document.querySelector('#botLevelLabel'), toast=document.querySelector('#toast');
-function initialBoard(){const back=['r','n','b','q','k','b','n','r']; return [back.map(p=>({c:'b',p})),...Array(6).fill(null).map((_,r)=>r===1?Array(8).fill(0).map(()=>({c:'b',p:'p'})):r===6?Array(8).fill(0).map(()=>({c:'w',p:'p'})):Array(8).fill(null)),back.map(p=>({c:'w',p}))];}
+function initialBoard(){const back=['r','n','b','q','k','b','n','r']; return [back.map(p=>({c:'b',p})),...Array(6).fill(null).map((_,r)=>r===1?Array(8).fill(0).map(()=>({c:'b',p:'p'})):r===5?Array(8).fill(0).map(()=>({c:'w',p:'p'})):Array(8).fill(null)),back.map(p=>({c:'w',p}))];}
 function fresh(color='w'){return {board:initialBoard(),turn:'w',playerColor:color,castle:{wK:true,wQ:true,bK:true,bQ:true},enPassant:null,last:null,moves:[],snapshots:[],over:false};}
 function clone(s){return {board:s.board.map(row=>row.map(x=>x&&{...x})),turn:s.turn,castle:{...s.castle},enPassant:s.enPassant,last:s.last,moves:[...s.moves],over:s.over};}
 function inside(r,c){return r>=0&&r<8&&c>=0&&c<8} function other(c){return c==='w'?'b':'w'}
