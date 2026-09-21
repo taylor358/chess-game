@@ -1,9 +1,9 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Checkmate ??Play chess your way</title>
+    <title>Checkmate — Play chess your way</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
@@ -12,37 +12,36 @@
   <body>
     <main class="app-shell">
       <header class="topbar">
-        <a class="brand" href="#" aria-label="Checkmate home"><span class="brand-mark">??/span><span>checkmate</span></a>
-        <div class="top-actions"><span class="status-dot"></span><span>Local game</span><button class="icon-button" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">??/button></div>
+        <a class="brand" href="#" aria-label="Checkmate home"><span class="brand-mark">♞</span><span>checkmate</span></a>
+        <div class="top-actions"><span class="status-dot"></span><span>Local game</span><button class="icon-button" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">◐</button></div>
       </header>
 
       <section class="hero">
-        <div><p class="eyebrow">A quiet game of focus</p><h1>Your move.<br /><em>Make it count.</em></h1><p class="hero-copy">Play a thoughtful game against an adaptable opponent. No clocks, no distractions ??just the board.</p></div>
-        <div class="hero-stat"><span class="stat-number">??/span><span>ways to play</span></div>
+        <div><p class="eyebrow">A quiet game of focus</p><h1>Your move.<br /><em>Make it count.</em></h1><p class="hero-copy">Play a thoughtful game against an adaptable opponent. No clocks, no distractions — just the board.</p></div>
+        <div class="hero-stat"><span class="stat-number">∞</span><span>ways to play</span></div>
       </section>
 
       <section class="game-layout">
         <div class="board-column">
-          <div class="player-bar top-player"><div class="avatar bot-avatar">??/div><div><strong>Nova</strong><span class="player-meta">your opponent 쨌 <span id="botLevelLabel">Balanced</span></span></div><span class="thinking" id="thinking"><i></i><i></i><i></i></span></div>
+          <div class="player-bar top-player"><div class="avatar bot-avatar">♟</div><div><strong>Nova</strong><span class="player-meta">your opponent · <span id="botLevelLabel">Balanced</span></span></div><span class="thinking" id="thinking"><i></i><i></i><i></i></span></div>
           <div class="board-wrap"><div class="rank-labels" aria-hidden="true"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div><div id="board" class="board" role="grid" aria-label="Chess board"></div><div class="file-labels" aria-hidden="true"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div></div>
           <div class="player-bar bottom-player"><div class="avatar user-avatar">Y</div><div><strong>You</strong><span class="player-meta">playing as White</span></div><span class="turn-label" id="turnLabel">Your turn</span></div>
         </div>
 
         <aside class="sidebar">
-          <div class="panel game-panel"><div class="panel-heading"><div><p class="eyebrow">New game</p><h2>Choose your level</h2></div><span class="sparkle">??/span></div><div class="difficulty-list" id="difficultyList"><button class="difficulty" data-level="beginner"><span class="level-icon">쨌</span><span><strong>Beginner</strong><small>Learn the basics</small></span><span class="check">??/span></button><button class="difficulty active" data-level="easy"><span class="level-icon">??/span><span><strong>Casual</strong><small>For a relaxed warm-up</small></span><span class="check">??/span></button><button class="difficulty" data-level="medium"><span class="level-icon">??/span><span><strong>Balanced</strong><small>A considered challenge</small></span><span class="check">??/span></button><button class="difficulty" data-level="sharp"><span class="level-icon">??/span><span><strong>Sharp</strong><small>A serious opponent</small></span><span class="check">??/span></button><button class="difficulty" data-level="expert"><span class="level-icon">??/span><span><strong>Expert</strong><small>Bring your best game</small></span><span class="check">??/span></button></div><div class="side-choice"><p class="eyebrow">Play as</p><div class="side-buttons"><button class="side-button active" data-side="w">White</button><button class="side-button" data-side="b">Black</button></div></div><select id="boardTheme" class="board-theme-select">
+          <div class="panel game-panel"><div class="panel-heading"><div><p class="eyebrow">New game</p><h2>Choose your level</h2></div><span class="sparkle">✦</span></div><div class="difficulty-list" id="difficultyList"><button class="difficulty" data-level="beginner"><span class="level-icon">·</span><span><strong>Beginner</strong><small>Learn the basics</small></span><span class="check">✓</span></button><button class="difficulty active" data-level="easy"><span class="level-icon">○</span><span><strong>Casual</strong><small>For a relaxed warm-up</small></span><span class="check">✓</span></button><button class="difficulty" data-level="medium"><span class="level-icon">◒</span><span><strong>Balanced</strong><small>A considered challenge</small></span><span class="check">✓</span></button><button class="difficulty" data-level="sharp"><span class="level-icon">●</span><span><strong>Sharp</strong><small>A serious opponent</small></span><span class="check">✓</span></button><button class="difficulty" data-level="expert"><span class="level-icon">◆</span><span><strong>Expert</strong><small>Bring your best game</small></span><span class="check">✓</span></button></div><div class="side-choice"><p class="eyebrow">Play as</p><div class="side-buttons"><button class="side-button active" data-side="w">White</button><button class="side-button" data-side="b">Black</button></div></div><select id="boardTheme" class="board-theme-select">
     <option value="classic">Classic green</option>
     <option value="wood">Wood</option>
     <option value="blue">Blue</option>
     <option value="purple">Purple</option>
-  </select><select id="pieceTheme" class="board-theme-select"><option value="classic">Staunton SVG</option><option value="wood">Meridian</option><option value="midnight">Meridian Shaded</option><option value="unicode">Classic Unicode</option></select><button class="new-game-button" id="newGame">Start new game <span>??/span></button><button class="undo-button" id="undoMove">Undo turn</button></div>
-          <div class="panel history-panel"><div class="panel-heading compact"><div><p class="eyebrow">Game log</p><h2>Moves</h2></div><span class="move-count" id="moveCount">0 / 0</span></div><div class="move-list" id="moveList"><div class="empty-state"><span>??/span><p>Your moves will appear here.</p></div></div></div>
-          <div class="tip-card"><span class="tip-icon">??/span><div><strong>Small tip</strong><p>Control the center early ??it gives your pieces more room to breathe.</p></div></div>
+  </select><select id="pieceTheme" class="board-theme-select"><option value="classic">Staunton SVG</option><option value="wood">Meridian</option><option value="midnight">Meridian Shaded</option><option value="unicode">Classic Unicode</option></select><button class="new-game-button" id="newGame">Start new game <span>→</span></button><button class="undo-button" id="undoMove">Undo turn</button></div>
+          <div class="panel history-panel"><div class="panel-heading compact"><div><p class="eyebrow">Game log</p><h2>Moves</h2></div><span class="move-count" id="moveCount">0 / 0</span></div><div class="move-list" id="moveList"><div class="empty-state"><span>♟</span><p>Your moves will appear here.</p></div></div></div>
+          <div class="tip-card"><span class="tip-icon">✦</span><div><strong>Small tip</strong><p>Control the center early — it gives your pieces more room to breathe.</p></div></div>
         </aside>
       </section>
-      <footer><span>짤 2025 checkmate</span><span>Piece art: Cburnett / Wikimedia Commons 쨌 CC BY-SA 3.0</span></footer>
+      <footer><span>© 2025 checkmate</span><span>Piece art: Cburnett / Wikimedia Commons · CC BY-SA 3.0</span></footer>
     </main>
     <div class="toast" id="toast" role="status"></div>
     <script src="app.js?v=2369c76"></script>
   </body>
 </html>
-
