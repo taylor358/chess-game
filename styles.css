@@ -40,3 +40,4 @@
     color: #20221f;
     border-radius: 3px;
   }
+ .board.theme-classic .white-piece{color:#fff;text-shadow:0 2px 0 #495348,0 0 2px #30352f}.board.theme-classic .black-piece{color:#242925}.board.theme-wood .white-piece{color:#fff8e8;text-shadow:0 2px 0 #8b6b4a,0 0 2px #5e452f}.board.theme-wood .black-piece{color:#3b2416}.board.theme-blue .white-piece{color:#f4f9ff;text-shadow:0 2px 0 #345579,0 0 2px #1d3550}.board.theme-blue .black-piece{color:#13263a}.board.theme-purple .white-piece{color:#fff8ff;text-shadow:0 2px 0 #654678,0 0 2px #49305a}.board.theme-purple .black-piece{color:#261632}
