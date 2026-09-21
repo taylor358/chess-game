@@ -1,6 +1,6 @@
 const pieces = { w:{k:'♔',q:'♕',r:'♖',b:'♗',n:'♘',p:'♙'}, b:{k:'♚',q:'♛',r:'♜',b:'♝',n:'♞',p:'♟'} };
 const names={k:'King',q:'Queen',r:'Rook',b:'Bishop',n:'Knight',p:'Pawn'};
-const levels={beginner:{label:'Beginner',depth:1,random:.20,time:.15},easy:{label:'Casual',depth:2,random:.08,time:.3},medium:{label:'Balanced',depth:3,random:.03,time:.65},sharp:{label:'Sharp',depth:5,random:0,time:3},expert:{label:'Expert',depth:6,random:0,time:6}};
+const levels={beginner:{label:'Beginner',depth:2,random:.15,time:.25},easy:{label:'Casual',depth:3,random:.06,time:.5},medium:{label:'Balanced',depth:4,random:.02,time:1},sharp:{label:'Sharp',depth:6,random:0,time:4},expert:{label:'Expert',depth:8,random:0,time:8}};
 let state, selected=null, legal=[], difficulty='easy', thinking=false;
 const boardEl=document.querySelector('#board'), moveList=document.querySelector('#moveList'), moveCount=document.querySelector('#moveCount'), turnLabel=document.querySelector('#turnLabel'), thinkingEl=document.querySelector('#thinking'), botLevelLabel=document.querySelector('#botLevelLabel'), toast=document.querySelector('#toast');
 function initialBoard(){const back=['r','n','b','q','k','b','n','r']; return [back.map(p=>({c:'b',p})),...Array(6).fill(null).map((_,r)=>r===0?Array(8).fill(0).map(()=>({c:'b',p:'p'})):r===5?Array(8).fill(0).map(()=>({c:'w',p:'p'})):Array(8).fill(null)),back.map(p=>({c:'w',p}))];}
