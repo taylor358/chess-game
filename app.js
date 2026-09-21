@@ -26,4 +26,17 @@ document.querySelector('#newGame').addEventListener('click',()=>{state=fresh(sel
 document.querySelector('#undoMove').addEventListener('click',undoMove);
 function undoMove(){if(thinking||!state.snapshots.length)return;const steps=state.turn===state.playerColor&&state.snapshots.length>=2?2:1;for(let i=0;i<steps;i++){const old=JSON.parse(state.snapshots.pop());state.board=old.board;state.turn=old.turn;state.castle=old.castle;state.enPassant=old.enPassant;state.last=old.last;state.moves=old.moves}state.over=false;selected=null;legal=[];turnLabel.textContent=state.turn===state.playerColor?'Your turn':'Nova is thinking…';updateLog();render()}
 document.querySelector('#themeToggle').addEventListener('click',()=>document.body.classList.toggle('dark'));
-state=fresh('w');render();updateLog();
+  const boardTheme = document.querySelector('#boardTheme');
+
+  boardTheme.addEventListener('change', (event) => {
+    boardEl.classList.remove(
+      'theme-classic',
+      'theme-wood',
+      'theme-blue',
+      'theme-purple'
+    );
+
+    boardEl.classList.add(`theme-${event.target.value}`);
+  });
+
+  boardEl.classList.add('theme-classic');state=fresh('w');render();updateLog();
