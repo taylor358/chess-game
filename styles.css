@@ -31,6 +31,12 @@
     background: #805b9b;
   }
 
+  .style-label {
+    margin: 8px 0 3px;
+  }
+  .style-label + .board-theme-select {
+    margin-top: 0;
+  }
   .board-theme-select {
     width: 100%;
     margin: 12px 0;
